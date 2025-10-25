@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intruder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <hr>
+    <input type="text" id="public-key-owner" size="15" value="toto@univ-rennes.fr">
+    <input id="get-public-key-button" type="button" value="Get RSA public keys">
+    <p></p>
+    <label>Public key for encryption: <p></p></label><textarea id="public-key-enc"></textarea>
+    <p></p>
+    <label>Public key for signature verification: <p></p></label><textarea id="public-key-sign"></textarea>
+    <p></p>
+    <input type="text" id="private-key-owner" size="15" value="toto@univ-rennes.fr">
+    <input id="get-private-key-button" type="button" value="Get RSA private keys">
+    <p></p>
+    <label>Private key for decryption: <p></p></label><textarea id="private-key-enc"></textarea>
+    <p></p>
+    <label>Private key for signature: <p></p></label><textarea id="private-key-sign"></textarea>
+    <p></p>
+    <hr>
+    <input id="generate-nonce-button" type="button" value="Generate-nonce">
+    <p></p>
+    <label>Nonce: </label><label id="nonce"></label>
+    <p></p>
+    <hr>
+    Filtering messages<p></p>
+    Indexes from: <input type="text" id="indexmin" size="5" value="*">
+    <!-- up to:
+    <input type="text" id="indexmax" size="5" value="*"> -->
+    <p></p>
+    From filter:
+    <input type="text" id="from" size="25" value="*"> To filter:
+    <input type="text" id="to" size="25" value="*"><input id="filter-button" type="button" value="Filter">
+    <p></p>
+    <p></p>
+
+    <hr>
+    Deleting message number <input type="text" id="deleteindex" size="5" value="0">
+    <input id="delete-button" type="button" value="Intruder deletes">
+    <p> </p>
+    <hr>
+    Intruder sends message From <input type="text" id="sendfrom" size="15" value="toto@univ-rennes.fr"> To:
+    <input type="text" id="sendto" size="15" value="titi@univ-rennes.fr">
+    <p></p>
+    Content <textarea id="sendcontent"></textarea>
+    <p></p>
+    <input id="send-button" type="button" value="Intruder sends">
+    <p></p>
+    <hr>
+    <p></p>
+    <label>Filtered messages: </label>
+    <p></p>
+    <div style="white-space: pre-line">
+        <label id="filtered-messages"></label>
+    </div>
+</body>
+<script type="text/javascript" src="JS/intruder.js"></script>
+
+</html>

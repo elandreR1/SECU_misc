@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+</head>
+
+<body>
+    <p></p>
+    Filtering messages<p></p>
+    Indexes from: <input type="text" id="indexmin" size="5" value="*">
+    <!-- up to:
+    <input type="text" id="indexmax" size="5" value="*"> -->
+    <p></p>
+    From filter: <input type="text" id="from" size="25" value="*"> To filter:
+    <input type="text" id="to" size="25" value="*"><input id="filter-button" type="button" value="Filter">
+    <p></p>
+    <p></p>
+    <label>Filtered messages: </label>
+    <p></p>
+    <div style="white-space: pre-line">
+        <label id="filtered-messages"></label>
+    </div>
+</body>
+<script type="text/javascript" src="JS/filter.js"></script>
+
+</html>

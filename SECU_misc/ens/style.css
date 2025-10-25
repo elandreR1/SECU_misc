@@ -1,0 +1,7 @@
+/* Size of textareas to present RSA keys */
+textarea {
+    overflow-y: scroll;
+    height: 50px;
+    width: 500px;
+    resize: none;
+}

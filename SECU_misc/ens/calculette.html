@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculette Crypto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body><!-- Encrypting with RSA-->
+    <h2>RSA key generation</h2>
+    <input id="generate-asym-enc-keys-button" type="button" value="Generate RSA 2048 key pair">
+    <p></p>
+    <label>Public key: <p></p></label><textarea id="gen-public-key-enc"></textarea>
+    <p></p>
+    <label>Private key: <p></p></label><textarea id="gen-private-key-enc"></textarea>
+    <p></p>
+    <p></p>
+    <hr>
+    <h2>RSA encryption</h2>
+    <label>Enter a message to encrypt:</label>
+    <p></p>
+    <textarea id="rsa-oaep-message" value="The message to encrypt"></textarea>
+    <p></p>
+    <label>Enter the RSA 2048 public key:</label>
+    <p></p>
+    <textarea id="rsa-pubkey-enc" value="???"></textarea>
+    <p> </p>
+    <input id="rsa-encrypt-button" type="button" value="Encrypt">
+    <p></p>
+    <label>Cyphered text:</label>
+    <p></p>
+    <textarea id="cyphertext-value"></textarea>
+    <hr>
+    <h2>RSA decryption</h2>
+    <p></p>
+    <label>Enter a message to decrypt:</label>
+    <p></p>
+    <textarea id="message-to-decrypt" value="???"></textarea>
+    <p></p>
+    <label>Enter the RSA 2048 private key:</label>
+    <p></p>
+    <textarea id="rsa-privkey-enc" value="???"></textarea>
+    <p> </p>
+    <input id="rsa-decrypt-button" type="button" value="Decrypt">
+    <p></p>
+    <label>decyphered text:</label>
+    <p></p>
+    <textarea id="decyphertext-value"></textarea>
+    <!--
+    <hr>
+    <h2>RSA key generation for signature </h2>
+    <input id="generate-asym-sign-keys-button" type="button" value="Generate RSA 2048 key pair, for signature">
+    <p></p>
+    <label>Public key: <p></p></label><textarea id="gen-public-key-sign"></textarea>
+    <p></p>
+    <label>Private key: <p></p></label><textarea id="gen-private-key-sign"></textarea>
+    <p></p>
+    <p></p> -->
+    <hr>
+    <h2>RSA signature </h2>
+    <label>Enter a message to sign:</label>
+    <p></p>
+    <textarea id="message-to-sign" value="The message to sign"></textarea>
+    <p></p>
+    <label>Enter the RSA 2048 private key:</label>
+    <p></p>
+    <textarea id="rsa-privkey-sign" value="???"></textarea>
+    <p> </p>
+    <input id="rsa-sign-button" type="button" value="Sign">
+    <p></p>
+    <label>Signed text:</label>
+    <p></p>
+    <textarea id="signed-value"></textarea>
+    <hr>
+    <p></p>
+    <h2>RSA signature verification</h2>
+    <label>Enter a signed message:</label>
+    <p></p>
+    <textarea id="signed-message-to-check" value="???"></textarea>
+    <p></p>
+    <label>Enter the message in clear:</label>
+    <p></p>
+    <textarea id="signed-message-in-clear" value="???"></textarea>
+    <p></p>
+    <label>Enter the RSA 2048 public key:</label>
+    <p></p>
+    <textarea id="rsa-pubkey-sign" value="???"></textarea>
+    <p> </p>
+    <input id="rsa-verify-button" type="button" value="Verify">
+    <p></p>
+    <label>Signature verification:</label>
+    <p></p>
+    <textarea id="verification-value"></textarea>
+    <hr>
+    <h2>Nonce generation</h2>
+    <input id="generate-nonce-button" type="button" value="Generate nonce">
+    <p></p>
+    <label>Nonce: </label><label id="nonce"></label>
+    <hr>
+    <h2> Message hashing with SHA256</h2>
+    <input id="hash-button" type="button" value="Apply SHA256">
+    <p></p>
+    <label>Message to hash: </label>
+    <p></p>
+    <textarea id="message-to-hash"></textarea>
+    <label>Hashed message: </label>
+    <p></p>
+    <textarea id="hashed-message"></textarea>
+    <p></p>
+    <hr>
+    <h2> AES256 Key generation</h2>
+    <input id="generate-symkey-button" type="button" value="Generate symmetric key">
+    <p></p>
+    <label>AES 256 Symmetric key: </label><label id="Symmetric key"></label>
+    <p></p></label><textarea id="gen-symmetric-key"></textarea>
+    <hr>
+    <h2> AES256 Encryption</h2>
+    <label>Enter a message to encrypt:</label>
+    <p></p>
+    <textarea id="aes-encrypt-message" value="The message to encrypt"></textarea>
+    <p></p>
+    <label>Enter the AES 256 key:</label>
+    <p></p>
+    <textarea id="aes-encrypt-key" value="???"></textarea>
+    <p> </p>
+    <input id="aes-encrypt-button" type="button" value="Encrypt">
+    <p></p>
+    <label>Cyphered text:</label>
+    <p></p>
+    <textarea id="aes-cyphertext-value"></textarea>
+    <p></p>
+    <label>Initialization Vector:</label>
+    <p></p>
+    <textarea id="aes-cyphertext-IV"></textarea>
+    <hr>
+    <h2> AES256 Key decryption</h2>
+    <label>Enter a message to decrypt:</label>
+    <p></p>
+    <textarea id="aes-decrypt-message" value="The message to decrypt"></textarea>
+    <p></p>
+    <label>Enter the initialization vector:</label>
+    <p></p>
+    <textarea id="aes-decrypt-IV" value=""></textarea>
+    <p></p>
+    <label>Enter the AES 256 key:</label>
+    <p></p>
+    <textarea id="aes-decrypt-key" value="???"></textarea>
+    <p> </p>
+    <input id="aes-decrypt-button" type="button" value="Decrypt">
+    <p></p>
+    <label>Message in clear:</label>
+    <p></p>
+    <textarea id="aes-decyphertext-value"></textarea>
+</body>
+
+<script type="text/javascript" src="JS/calculette.js"></script>
+
+</html>
